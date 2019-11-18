@@ -1,0 +1,15 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+    <ul class="navbar-nav">
+      <li><a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/employee" class="nav-link">View Employee</a></li>
+      <li *ngIf="authenticationService.isUserLoggedIn()" ><a  routerLink="/addemployee" class="nav-link">Add Employee</a></li>
+      <li *ngIf="authenticationService.isUserLoggedIn()" ><a  routerLink="/viewAllEmployee" class="nav-link">View All Employee</a></li>
+      <li><a *ngIf="!authenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+      <li><a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">logout</a></li>
+
+
+    </ul>
+  </nav>
+
+</header>
