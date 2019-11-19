@@ -7,8 +7,34 @@ public class Employee {
     private String designation;
     private Integer empId;
     private int salary;
+    private String manufacturer;
+    private String currentQuantity ;
+    private String productCode;
 
 
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public String getCurrentQuantity() {
+        return currentQuantity;
+    }
+
+    public void setCurrentQuantity(String currentQuantity) {
+        this.currentQuantity = currentQuantity;
+    }
+
+    public String getProductCode() {
+        return productCode;
+    }
+
+    public void setProductCode(String productCode) {
+        this.productCode = productCode;
+    }
 
     public String getName() {
         return name;

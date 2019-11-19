@@ -1,9 +1,9 @@
 package io.pushkar.employeeModule.controllers;
 
 import io.pushkar.employeeModule.model.Employee;
+import io.pushkar.employeeModule.model.ProductDetail;
 import io.pushkar.employeeModule.model.User;
 import io.pushkar.employeeModule.service.EmployeeService;
-import org.omg.SendingContext.RunTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +26,14 @@ public class EmployeeController {
     public List<Employee> firstPage(){
         return employeeService.fetchAllEmployee();
     }
+
+    @GetMapping(path ="/fetchProductDetail",produces ="application/json")
+    public List<ProductDetail> findProduct(){
+
+        return  employeeService.fetchAllProductDetail();
+
+    }
+
     @GetMapping(path="/validateLogin" )
     public User validateLogin() {
         try {

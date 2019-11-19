@@ -1,13 +1,17 @@
 package io.pushkar.employeeModule.service.Impl;
 
 import io.pushkar.employeeModule.entity.EmployeeEntity;
+import io.pushkar.employeeModule.entity.ProductEntity;
 import io.pushkar.employeeModule.mapper.Mapper;
 import io.pushkar.employeeModule.model.Employee;
+import io.pushkar.employeeModule.model.ProductDetail;
 import io.pushkar.employeeModule.repository.EmployeeRepository;
+import io.pushkar.employeeModule.repository.ProductRepository;
 import io.pushkar.employeeModule.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,6 +22,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeRepository repository;
     @Autowired
     private Mapper mapper;
+
+    @Autowired
+    private ProductRepository ProductRepository;
 
     @Override
     public List<Employee> fetchAllEmployee() {
@@ -41,5 +48,19 @@ public class EmployeeServiceImpl implements EmployeeService {
             return true;
     }
 
+    @Override
+    public List<ProductDetail> fetchAllProductDetail(){
+        List<ProductEntity> productEntityList=ProductRepository.findAll();
+        //String str="abc";
+  List<ProductDetail> productDetailList=new ArrayList<>();
+  for (int i=0;i<productEntityList.size();i++){
+      ProductDetail productDetail=new ProductDetail();
+      productDetail.setProductCode(productEntityList.get(i).getProductCode());
+      productDetail.setProductName(productEntityList.get(i).getProductName());
+      productDetail.setProductQuantity(productEntityList.get(i).getProductQuantity());
+      productDetailList.add( productDetail);
+  }
+  return productDetailList;
+    }
 
 }

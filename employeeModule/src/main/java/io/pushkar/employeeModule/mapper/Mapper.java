@@ -13,6 +13,9 @@ public class Mapper {
         emp.setSalary(entity.getSalary());
         emp.setDesignation(entity.getDesignation());
         emp.setName(entity.getName());
+        emp.setCurrentQuantity(entity.getCurrentQuantity());
+        emp.setManufacturer(entity.getManufacturer());
+        emp.setProductCode(entity.getProductCode());
         return emp;
 
     }

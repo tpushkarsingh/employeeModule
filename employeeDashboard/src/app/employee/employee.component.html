@@ -2,14 +2,20 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>name</th>
-        <th>designation</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Manufacturer</th>
+        <th>Current Quantity</th>
+        <th>Product Code</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let employee of employees">
         <td>{{employee.name}}</td>
         <td>{{employee.designation}}</td>
+        <td>{{employee.manufacturer}}</td>
+        <td>{{employee.currentQuantity}}</td>
+        <td>{{employee.productCode}}</td>
         <td><button class="btn btn-danger" (click)="deleteEmployee(employee)">Delete Employee</button></td>
       </tr>
     </tbody>
