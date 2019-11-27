@@ -19,6 +19,7 @@ export class EmployeeComponent implements OnInit {
 
 
     );
+    debugger;
   }
 
   deleteEmployee(employee:Employee): void{

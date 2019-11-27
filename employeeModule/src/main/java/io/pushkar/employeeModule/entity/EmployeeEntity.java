@@ -10,22 +10,22 @@ public class EmployeeEntity {
     @Column(name = "emp_id", unique = true, nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer empId;
-    @Column(name="name",nullable = false)
+
     private String name;
-    @Column(name="designation",nullable = false)
+
     private String designation;
-    @Column(name="salary",nullable = false)
+
     private int salary;
-    @Column(name="manufacturer",nullable = false)
+
     private String manufacturer;
-    @Column(name="current_quantity",nullable = false)
+
     private String currentQuantity ;
-    @Column(name="product_code",nullable = false)
+
     private String productCode;
     public String getName() {
         return name;
     }
-
+    @Column(name="name",nullable = false)
     public void setName(String name) {
         this.name = name;
     }
@@ -33,7 +33,7 @@ public class EmployeeEntity {
     public String getDesignation() {
         return designation;
     }
-
+    @Column(name="designation",nullable = false)
     public void setDesignation(String designation) {
         this.designation = designation;
     }
@@ -49,7 +49,7 @@ public class EmployeeEntity {
     public int getSalary() {
         return salary;
     }
-
+    @Column(name="salary",nullable = false)
     public void setSalary(int salary) {
         this.salary = salary;
     }
@@ -57,7 +57,7 @@ public class EmployeeEntity {
     public String getManufacturer() {
         return manufacturer;
     }
-
+    @Column(name="manufacturer",nullable = false)
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
@@ -65,7 +65,7 @@ public class EmployeeEntity {
     public String getCurrentQuantity() {
         return currentQuantity;
     }
-
+    @Column(name="current_quantity",nullable = false)
     public void setCurrentQuantity(String currentQuantity) {
         this.currentQuantity = currentQuantity;
     }
@@ -73,7 +73,7 @@ public class EmployeeEntity {
     public String getProductCode() {
         return productCode;
     }
-
+    @Column(name="product_code",nullable = false)
     public void setProductCode(String productCode) {
         this.productCode = productCode;
     }

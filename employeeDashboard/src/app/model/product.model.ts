@@ -1,7 +1,7 @@
 export class ProductModel{
 
-
-  public productCode: int;
+public productCode: number;
 public  productName: string;
-public  currentQuantity: number;
+public  productQuantity: string;
+
 }
